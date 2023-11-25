@@ -212,16 +212,16 @@ Silahkan input submenu yang akan dijalankan: ''')
                         print("\n\n|Kode Barang\t| Nama Makanan\t\t| Stock\t| Harga\t\t| Tipe Makanan")
                         print("|{:<8}\t| {:<8}\t\t| {:<2}\t| {:<8}\t| {:<8}".format(item["kode barang"], item["nama makanan"], item["stock"], item["harga"], item["tipe makanan"]))
                         produk_ditemukan = True
-                        hasil2 = input("Apakah ingin melanjutkan update Tipe Makanan produk anabul (yes/no)?: ")
+                        hasil2 = input("Apakah ingin melanjutkan update stock produk anabul (yes/no)?: ")
                         hasil2 = hasil2.lower()
                         if hasil2 == "yes":
-                            input_hasil = str(input("Masukkan Tipe Makanan produknya yang benar: "))
+                            input_hasil = int(input("Masukkan jumlah produk anabul yang diubah: "))
                             cek_hasil = input("Apakah kode produk ({}) diupdate jadi {} (yes/no)? ".format(input_stock,input_hasil))
                             cek_hasil = cek_hasil.lower()
                             if cek_hasil == "yes":
                             
-                                item["tipe makanan"] = input_hasil
-                                print("Update Tipe Makanan Produk berhasil")
+                                item["stock"] = input_hasil
+                                print("Update Stock Produk Anabul berhasil")
                         break  
              
                 if not produk_ditemukan:
